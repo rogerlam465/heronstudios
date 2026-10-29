@@ -1,0 +1,253 @@
+:root {
+  --bg: #0d0f12;
+  --card-bg: #16191e;
+  --border: #262a33;
+  --accent: #ff5e36;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  padding: 0 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Header / Nav */
+header {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.nav-contact {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.nav-contact:hover {
+  color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding: 80px 0;
+  align-items: center;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(255, 94, 54, 0.1);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.6rem;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+}
+
+.cta-button {
+  background: var(--accent);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: opacity 0.2s ease;
+}
+
+.cta-button:hover {
+  opacity: 0.9;
+}
+
+/* Hero Visual (Proof of Process) */
+.hero-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card-label {
+  font-size: 0.75rem;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.prose-text {
+  font-family: Georgia, Cambria, serif;
+  font-style: italic;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.script-text {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Overview Section */
+.overview {
+  padding: 60px 0;
+  border-top: 1px solid var(--border);
+}
+
+.overview h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.overview p {
+  color: var(--muted);
+  max-width: 700px;
+  font-size: 1.05rem;
+}
+
+/* Process Section */
+.process {
+  padding: 60px 0;
+  border-top: 1px solid var(--border);
+}
+
+.section-title {
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.step-num {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.step-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.step-desc {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Footer / Contact */
+footer {
+  padding: 80px 0 60px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+footer h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+footer p {
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.email-link {
+  font-size: 1.2rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.email-link:hover {
+  border-color: var(--accent);
+}
+
+.copyright {
+  margin-top: 60px;
+  font-size: 0.8rem;
+  color: #475569;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 40px 0;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+  }
+}
