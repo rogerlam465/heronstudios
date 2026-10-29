@@ -3,63 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Heron Studios | Web Prose to Webcomics</title>
+  <meta name="description" content="">
+  <title data-i18n="pageTitle"></title>
   <link rel="stylesheet" href="styles.css">
+  <script src="translations.js" defer></script>
+  <script src="app.js" defer></script>
 </head>
 <body>
 
   <div class="container">
     <header>
-      <div class="brand">HERON STUDIOS</div>
-      <a href="mailto:inquiries@heronstudios.ca" class="nav-contact">Inquire &rarr;</a>
+      <div class="brand" data-i18n="brand"></div>
+      <div class="header-actions">
+        <div class="language-toggle" role="group" data-i18n-aria-label="languageSelection">
+          <button type="button" class="language-option is-active" data-language="en" aria-pressed="true">EN</button>
+          <button type="button" class="language-option" data-language="fr" aria-pressed="false">FR</button>
+        </div>
+        <a href="mailto:inquiries@heronstudios.ca" class="nav-contact" data-i18n="inquire"></a>
+      </div>
     </header>
 
     <main>
       <!-- Hero Section -->
       <section class="hero">
         <div class="hero-text">
-          <span class="badge">Independent Adaptation Studio</span>
-          <h1>We give web fiction another life in multimedia.</h1>
-          <p class="hero-sub">We collaborate directly with authors and online writing communities to adapt long-form web prose into long-running, serialized webcomics.</p>
-          <a href="mailto:inquiries@heronstudios.ca" class="cta-button">Partner With Us</a>
+          <span class="badge" data-i18n="badge"></span>
+          <h1 data-i18n="heroTitle"></h1>
+          <p class="hero-sub" data-i18n="heroDescription"></p>
+          <a href="mailto:inquiries@heronstudios.ca" class="cta-button" data-i18n="partner"></a>
         </div>
 
         <div class="hero-visual">
           <div class="card">
-            <span class="card-label">01 / SOURCE PROSE</span>
-            <p class="prose-text">"She stood in the shadows with an umbrella and a lit cigarette, waiting for someone she didn't know. As the rain fell in the dimly lit street, she remained patient and vigilant..."</p>
+            <span class="card-label" data-i18n="sourceLabel"></span>
+            <p class="prose-text" data-i18n="sourceProse"></p>
           </div>
           <div class="card">
-            <span class="card-label">02 / ADAPTATION FRAMEWORK</span>
-            <p class="script-text"><strong>PANEL 1 [WIDE]:</strong> Low-angle street level. High-contrast line art, heavy shadows. Umbrella and cigarette visible in the frame.</p>
+            <span class="card-label" data-i18n="adaptationLabel"></span>
+            <p class="script-text"><strong data-i18n="panelLabel"></strong> <span data-i18n="panelDescription"></span></p>
           </div>
         </div>
       </section>
 
       <!-- Overview Section -->
       <section class="overview">
-        <h2>Built for Web Authors & Communities</h2>
-        <p>Bringing written fiction to a visual medium requires respecting the source material. We handle the production pipeline, scripting, and publication logistics so authors can expand their world into comics without the operational overhead.</p>
+        <h2 data-i18n="overviewTitle"></h2>
+        <p data-i18n="overviewDescription"></p>
       </section>
 
       <!-- Process Section -->
       <section class="process">
-        <div class="section-title">The Adaptation Pipeline</div>
+        <div class="section-title" data-i18n="processTitle"></div>
         <div class="grid-3">
           <div>
             <div class="step-num">01</div>
-            <div class="step-title">Curation & Rights</div>
-            <div class="step-desc">We partner directly with authors or community leads to establish clear, fair adaptation agreements.</div>
+            <div class="step-title" data-i18n="stepOneTitle"></div>
+            <div class="step-desc" data-i18n="stepOneDescription"></div>
           </div>
           <div>
             <div class="step-num">02</div>
-            <div class="step-title">Scripting & Layout</div>
-            <div class="step-desc">Prose is translated into visual comic scripts and storyboards, preserving core narrative beats and dialogue.</div>
+            <div class="step-title" data-i18n="stepTwoTitle"></div>
+            <div class="step-desc" data-i18n="stepTwoDescription"></div>
           </div>
           <div>
             <div class="step-num">03</div>
-            <div class="step-title">Production & Release</div>
-            <div class="step-desc">Human-led illustration teams produce serialized pages, optimized for web comic platforms and reader growth.</div>
+            <div class="step-title" data-i18n="stepThreeTitle"></div>
+            <div class="step-desc" data-i18n="stepThreeDescription"></div>
           </div>
         </div>
       </section>
@@ -67,10 +76,10 @@
 
     <!-- Footer / Contact -->
     <footer>
-      <h2>Have a story ready to adapt?</h2>
-      <p>We are currently selecting web prose series for our upcoming publication slate.</p>
+      <h2 data-i18n="contactTitle"></h2>
+      <p data-i18n="contactDescription"></p>
       <a href="mailto:inquiries@heronstudios.ca" class="email-link">inquiries@heronstudios.ca</a>
-      <div class="copyright">&copy; Heron Studios. All rights reserved.</div>
+      <div class="copyright" data-i18n="copyright"></div>
     </footer>
   </div>
 

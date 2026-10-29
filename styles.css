@@ -42,6 +42,49 @@ header {
   color: var(--text);
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.language-toggle {
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card-bg);
+}
+
+.language-option {
+  border: 0;
+  border-radius: 4px;
+  padding: 5px 8px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.language-option:hover,
+.language-option:focus-visible {
+  color: var(--text);
+}
+
+.language-option.is-active {
+  background: var(--border);
+  color: var(--text);
+}
+
+.language-option:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 .nav-contact {
   color: var(--muted);
   text-decoration: none;
@@ -237,6 +280,14 @@ footer p {
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
+  header {
+    gap: 16px;
+  }
+
+  .header-actions {
+    gap: 14px;
+  }
+
   .hero {
     grid-template-columns: 1fr;
     padding: 40px 0;
@@ -249,5 +300,15 @@ footer p {
 
   h1 {
     font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .header-actions {
+    gap: 10px;
+  }
+
+  .nav-contact {
+    font-size: 0.8rem;
   }
 }
